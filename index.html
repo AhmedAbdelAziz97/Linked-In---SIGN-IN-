@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Welcome to my website :">
+    <title> Sign In to LinkedIn </title>
+
+    <link rel="stylesheet" href="Normalize.css" />
+    <link rel="stylesheet" href="LinkedIn.css" type="text/css" />
+
+</head>
+
+
+<script>
+    function validateForm() {
+        var z = document.forms["myForm"]["Email"].value;
+        if (z == "") {
+            alert("Email must be filled out");
+            return false;
+
+        }
+        atpos = z.indexOf("@");
+        if (atpos < 1) {
+            alert("email must contain @ character")
+
+            return false;
+        }
+
+
+        var y = document.forms["myForm"]["password"].value;
+        if (y == "") {
+
+            alert("password must be filled out");
+            return false;
+        } else {
+
+            alert("Done sucessfully");
+            return true;
+
+        }
+
+    }
+
+</script>
+
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="container">
+                <div class="label">
+                    <h2 href="#">Linked <span class="in"> in </span></h2>
+                </div>
+                <input class="join" type="text" placeholder="Search..">
+            </div>
+        </div>
+    </div>
+
+    <div class="lower">
+        <div class="lowerbar">
+            <div class="container3">
+                <ul>
+                    <li> Linked<span class="in2">in</span><span class="in3"> © 2018</span></li>
+                    <li><a href="#"> User Agreement </a></li>
+                    <li><a href="#"> Privacy Policy </a></li>
+                    <li><a href="#"> Community Guidelines </a></li>
+                    <li><a href="#"> Cookie Policy </a></li>
+                    <li><a href="#"> Copyright Policy </a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn">Services </a>
+                            <div class="dropdown-content">
+                                <a href="#">Mobility services</a>
+                                <a href="#">Networking services</a>
+                                <a href="#">Systems services</a>
+
+                                <a href="#">Technology support services</a>
+                                <a href="#">Digital operations</a>
+
+                                <a href="#">Financing solutions</a>
+                                <a href="#">Banking</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <img src="LINKEDIN.png" alt="this is Logo of LinkedIn">
+        <form name="myForm" onsubmit="return validateForm()" method="post" action="index5.html">
+            <div class="resgister">
+                <input type="text" name="Email" placeholder="Email address">
+                <input type="password" name="password" placeholder="Password" maxlength="10">
+                <input type="submit" value="Sign in">
+                <div class="child">
+                    <a class="a" href="#"> Forgot password? </a><br>
+                    <span class="b"> Not a member? </span>
+                    <a class="c" href="Index2.html">Join now</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
